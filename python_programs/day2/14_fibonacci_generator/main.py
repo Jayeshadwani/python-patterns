@@ -1,10 +1,10 @@
 from itertools import islice
 from typing import Iterator
 
-
+# Yeild is not like return, which returns a value and exits the function. 
+# Yield produces a value and pauses the function, allowing it to be resumed later.
 def fibonacci() -> Iterator[int]:
-    """Yield the Fibonacci numbers forever: 0,1, 1 2, 3, 5, ..."""
-
+    """Yield the Fibonacci numbers forever: 0, 1, 1, 2, 3, 5, ..."""
     a, b = 0, 1
     yield a
     yield b
