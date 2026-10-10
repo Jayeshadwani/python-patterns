@@ -2,6 +2,7 @@ import functools
 from typing import Any, Callable, Tuple, Type
 
 # a decorator function will wrap the wrapper function which contains the retry logic
+# @retry(3) = retry(3)(flaky)
 def retry(
     max_attempts: int,
     exceptions: Tuple[Type[BaseException], ...] = (Exception,),
@@ -26,6 +27,8 @@ def retry(
         return wrapper
 
     return decorator
+
+
 
 def main():
     calls = {"n": 0}

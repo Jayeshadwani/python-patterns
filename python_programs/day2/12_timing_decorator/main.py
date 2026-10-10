@@ -23,7 +23,7 @@ def timer(func: Callable[..., Any]) -> Callable[..., Any]:
     return wrapper
     
 
-
+# func = timer(func)
 @timer
 def slow_add(a, b=0):
     """Add two numbers slowly."""
