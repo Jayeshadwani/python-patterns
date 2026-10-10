@@ -2,7 +2,6 @@ from typing import Iterable, Iterator, List, TypeVar
 
 T = TypeVar("T")
 
-
 def batch(iterable: Iterable[T], n: int) -> Iterator[List[T]]:
     """Yield lists of up to n items from iterable, in order. Last list may be shorter."""
     if n <= 0:
@@ -12,8 +11,10 @@ def batch(iterable: Iterable[T], n: int) -> Iterator[List[T]]:
     for item in iterable:
         yield_list.append(item)
         if len(yield_list) == n:
-            yield yield_list
+            yield yield_list # Yield the current batch
             yield_list = []
+    
+    # Yield any remaining items in yield_list if it is not empty
     if yield_list:
         yield yield_list
     
