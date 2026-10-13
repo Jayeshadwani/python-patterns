@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def inner_join(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
     """Customers with orders, one row per order."""
     return (
