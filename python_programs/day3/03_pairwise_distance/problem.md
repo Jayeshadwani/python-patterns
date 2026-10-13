@@ -6,6 +6,8 @@
 ## Task
 Write `pairwise_distances(A, B)` where `A` has shape `(n, d)` and `B` has shape `(m, d)`.
 Return an `(n, m)` matrix whose entry `[i, j]` is the Euclidean distance between `A[i]` and `B[j]`.
+formula of Euclidean distance is given by:
+
 
 ## Examples
 ```python
